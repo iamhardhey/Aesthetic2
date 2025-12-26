@@ -84,7 +84,9 @@ body{
   background:linear-gradient(135deg,var(--purple),var(--pink));
   color:#fff;
 }
-.hero-btn{margin-top:5px;}
+.btn-primaryhero-btn {
+  margin-top: 20px;
+}
 
 /* HERO */
 .hero-wrapper{
@@ -114,6 +116,10 @@ body{
   text-align:center;
   color:#fff;
   max-width:380px;
+}
+.hbtn {
+  margin-top: 60px;
+  border-radius: 20px;
 }
 
 /* SECTIONS */
