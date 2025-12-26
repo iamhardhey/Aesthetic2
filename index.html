@@ -17,21 +17,30 @@
   <div class="container header-flex">
     <h1 class="logo">Lumière</h1>
 
+    <!-- Hamburger wrapper -->
+    <div class="hamburger-wrapper">
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+
+    <!-- Navigation -->
     <nav class="nav">
-      <a href="#">Home</a>
-      <a href="#">Treatments</a>
-      <a href="#">About</a>
+      <a href="#hero">Home</a>
+      <a href="#why-us">Why Choosing Us</a>
+      <a href="#popular-treatments">Our Treatments</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="#faq">FAQ</a>
       <a href="#" class="btn btn-outline">Book Consultation</a>
     </nav>
-
-    <div class="hamburger">
-      <span></span><span></span><span></span>
-    </div>
   </div>
 </header>
 
 <!-- HERO -->
-<section class="hero-wrapper">
+<section id="hero" class="hero-wrapper">
   <div class="hero-circle fade-up">
     <div class="hero-overlay"></div>
     <div class="hero-content">
@@ -43,7 +52,7 @@
 </section>
 
 <!-- WHY CHOOSE US -->
-<section class="why-us">
+<section id="why-us" class="why-us">
   <div class="container">
     <h2 class="section-title fade-up">Why Choose Lumière?</h2>
     <div class="why-grid">
@@ -67,7 +76,7 @@
 </section>
 
 <!-- POPULAR TREATMENTS -->
-<section class="treatments">
+<section id="popular-treatments" class="treatments">
   <div class="container">
     <h2 class="section-title fade-up">Popular Treatments</h2>
     <div class="treatment-grid">
@@ -118,7 +127,7 @@
 </section>
 
 <!-- TESTIMONIALS -->
-<section class="testimonials">
+<section id="testimonials" class="testimonials">
   <div class="container">
     <h2 class="section-title fade-up">What Our Clients Say</h2>
     <div class="testimonial-grid">
@@ -142,7 +151,7 @@
 </section>
 
 <!-- FAQ -->
-<section class="faq">
+<section id="faq" class="faq">
   <div class="container">
     <h2 class="section-title fade-up">Frequently Asked Questions</h2>
     <div class="faq-grid">
@@ -163,7 +172,7 @@
 </section>
 
 <!-- FOOTER -->
-<footer id="contact" class="footer fade-up">
+<footer class="footer fade-up">
   <div class="container">
     <p>📞 Phone : +2348123729316</p>
     <p>© 2025 Lumière Aesthetic Clinic. All rights reserved.</p>
@@ -177,34 +186,6 @@
 
 <!-- WHATSAPP -->
 <a href="https://wa.me/2348123729316" class="whatsapp-btn">💬</a>
-
-<!-- JS -->
-<script>
-/* Sticky header shadow */
-const header = document.querySelector('.header');
-window.addEventListener('scroll',()=>header.classList.toggle('scrolled',window.scrollY>20));
-
-/* Hamburger */
-const hamburger=document.querySelector('.hamburger');
-const nav=document.querySelector('.nav');
-hamburger.addEventListener('click',()=>nav.classList.toggle('active'));
-
-/* FAQ */
-document.querySelectorAll('.faq-card').forEach(card=>{
-  card.addEventListener('click',()=>card.classList.toggle('active'));
-});
-
-/* Scroll animation */
-const observer=new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add('scroll-visible');
-    }
-  });
-},{threshold:.2});
-
-document.querySelectorAll('.fade-up,.fade-down,.scroll-img').forEach(el=>observer.observe(el));
-</script>
 
 </body>
 </html>
